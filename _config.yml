@@ -5,7 +5,7 @@ header-img: img/post-bg-desk.jpg
 email: wanjh20@gmail.com
 description: ""
 keyword: "ManifoldCaffe, 流形与咖啡, Blog"
-url: "http://manifoldcaffe.github.io"          # your host, for absolute URL
+url: "http://manifoldcaffe.cn"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
 
