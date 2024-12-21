@@ -24,16 +24,18 @@ If $\xi$ is separable, then $\sup_{t\in (a, b)}\xi_t$ , $\inf_{t \in (a,b)}\xi_t
 **Definition**: (*Shift operator*) Let $(\Omega, \mathscr{F})=(\mathscr{S}^T,\Sigma^T)$ , $T$ is closed under addition. Define $\theta^t:\mathscr{S}^T \rightarrow \mathscr{S}^T$ s.t. $(\theta^t\omega)_s = \omega_{s+t}$. Then $\theta^t$ is $\Sigma^T - \Sigma^T$ measurable. From $\theta^t$ we get a set operator $\theta^{-t}$: $\theta^{-t}\{\omega|(\omega_{t_1}, \dots, \omega_{t_n})\in B\} = \{\omega|(\omega_{t_1+t}, \dots, \omega_{t_n+t}) \in B\}$, $\forall B \in \Sigma^n$. And a function operator $\theta^t$: $\theta^tf(\omega_{t_1}, \dots, \omega_{t_n}, \dots) = f(\omega_{t_1 + t}, \dots, \omega_{t_n + t}, \dots)$. If $\mathrm{P}\circ \theta^t = \mathrm{P}$, then $f = g \implies \theta^t f \implies \theta^t g$.
 ## §§1.3 Independent Increment Process and Martingale
 ### 1. Independent Increment Process
-**Definition**: *Independent increment process*: $\forall t_0<t_1<\dots<t_n \in T$, $\xi_{t_0}, \xi_{t_1} - \xi_{t_2}, \dots, \xi_{t_n}-\xi_{t_{n-1}}$are independent
+**Definition**: *Independent increment process*: $\forall t_0<t_1<\dots<t_n \in T$, $\xi_{t_0}, \xi_{t_1} - \xi_{t_2}, \dots, \xi_{t_n}-\xi_{t_{n-1}}$ are independent.
 
 **Properties**: 
-+ Suppose $\mathbb{E}(\xi_t) = 0 (\forall t \in T)$, $\mathscr{F} = \sigma(\xi_u; u \leq s \in T)$. Then $\forall s < t \in T$, $\mathbb{E}(\xi_t|\mathscr{F}_s) = \xi_s$.
-+ $\forall s < t$ and $\mathscr{B}_\mathbf{R}$-measurable function $f$. $\mathbb{E}(f(\xi_t)|\mathscr{F}_s) = \mathbb{E}(f(\xi_t)|\xi_s)$. (Markov property)
++ Suppose $\mathbb{E}(\xi_t) = 0 (\forall t \in T)$, $\mathscr{F} = \sigma(\xi_u; u \leq s \in T)$ . Then $\forall s < t \in T$ , $\mathbb{E}(\xi_t|\mathscr{F}_s) = \xi_s$.
++ $\forall s < t$ and $\mathscr{B}_\mathbf{R}$ -measurable function $f$. $\mathbb{E}(f(\xi_t)|\mathscr{F}_s) = \mathbb{E}(f(\xi_t)|\xi_s)$. (Markov property)
+
 	*Proof: 
 	**lemma**: Let $(\Omega, \mathcal{F}, \mathbf{P})$ be a probability space, $\mathcal{G}$ is a sub-$\sigma$-field of $\mathcal{F}$, $(S, \mathcal{S})$ and $(E, \mathcal{E})$ are measurable spaces, $X$ is a $S$-valued r.v. , $Y$ is a $E$-valued r.v. . Suppose $Y$ is independent of $\mathcal{G}$. Let $g$ be a $\mathcal{S} \times \mathcal{E}$-measurable function on $(S, E)$ s.t. $\mathbb{E}[|g(X, Y)|] < \infty$, then $\mathbb{E}[g(X, Y)|\mathcal{G}] = \mathbb{E}[g(x, Y)]|_{x = X}$.
 	It's sufficient to show that $\mathbb{E}(f(\xi_t)|\mathscr{F}_s)$ is $\sigma(\xi_s)$-measurable which follows from the lemma noticing that $\mathbb{E}(f(\xi_t)|\mathscr{F}_s) = \mathbb{E}(f(\xi_t - \xi_s + \xi_s)|\mathscr{F}_s)$.*
 ### 2. Martingale
 *Martingale*: $\{\xi_t, \mathscr{F}_t; t \in T\}$ is a martingale, if $\forall s \leq t \in T$, $\mathbb{E}[|\xi_t|] < +\infty$, $\mathbb{E}(\xi_t)|\mathscr{F}_s) = \xi_s$. Especially, when $\mathscr{F}_s = \sigma(\xi_u; u \leq s)$, we call $\xi = \{\xi_t\}$ is a martingale for short.
+
 **Proposition**: $\xi$ is a martingale, then $$\mathbb{E}(\xi_t|\mathscr{F}_s) = \xi_s, \forall s \leq t \iff \mathbb{E}(\xi_{t_{n + 1}} | \xi_{t_0}, \dots, \xi_{t_n}) = \xi_{t_n}, \forall t_1 < t_2 < \dots < t_n \in T.$$
 	*Proof:
 	$\Leftarrow$: $\mathbb{E}(\xi_t|\mathscr{F}_s) = \mathbb{E}({\mathbb{E}(\xi_t|\xi_{t_0}, \xi_{t_1}, \dots, \xi_{s})|\mathscr{F}_s}) = \mathbb{E}(\xi_s | \mathscr{F}_s) = \xi_s$.
@@ -89,7 +91,9 @@ If $\xi$ is separable, then $\sup_{t\in (a, b)}\xi_t$ , $\inf_{t \in (a,b)}\xi_t
 **Remark**: $\xi_t$'s conditional expectation w.r.t. $\xi_s$'s given value $\mathbb E( \xi_t \in A | \xi_s = x)$ and the initial distribution $\mathbb P \circ \xi_0^{-1}$ determine the distribution of $\boldsymbol \xi$.
 
 **Definition**: $p(s, x; t, A) \triangleq \mathbb E(\chi_{\{\xi_t \in A\}} | \xi_s = x)$, $p_0(A) \triangleq \mathbb P([\xi_0 \in A])$.
+
 ***
+
 **Theorem**:
 
 **Definition**: (family of transitive probability): 
@@ -136,5 +140,6 @@ $$
 2. $\xi_{t_0}$ is independent with $\{\xi_t; t \in T, t \neq t_0\}$ iff $\sigma(t_0, t) = 0 (\forall t \in T, t \neq t_0)$.
 
 **Proposition**: Let $\boldsymbol \xi$ is a Gauss system, and let $\xi_{t_n} \in \boldsymbol \xi$, then $\xi_{t_n} \overset{\mathbb P}{\to} \xi_0 (n \to \infty)$. Then $\mathbb \xi_{t_n} \overset{L^2}{\to} \xi_0  (n \to \infty)$. And $\xi_0$ is Gaussian.
+
 	**Proof**: $\forall \epsilon > 0$, $\mathbb P( | \xi_{t_j} - \xi_{t_k} | > \epsilon) \to 0 (k, j \to \infty)$. And  $LHS =$.
 ## §§2.2 Stopping Time and Stopping Theorem of Martingale
