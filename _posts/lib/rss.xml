@@ -1,0 +1,57 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Obsidian Vault]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>Obsidian Vault</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 21 Dec 2024 10:00:54 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 21 Dec 2024 10:00:53 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[§1 Intro]]></title><description><![CDATA[ 
+ <br><br><br><br>Proposition: Suppose  is a Polish space with a compatible probability measure family , then there is a probability  on  s.t. coincides with  on finite rectangle parabolic set on .<br><br>Definition: Separability of stochastic process: open interval ,  closed set , , <br>
+,  a.e<br>
+If  is separable, then  ,  a.e. -measurable. (), when <br><br>Definition: (Shift operator) Let  ,  is closed under addition. Define  s.t. . Then  is  measurable. From  we get a set operator : , . And a function operator : . If , then .<br><br><br>Definition: Independent increment process: , are independent<br>
+Properties: <br>
+<br>Suppose , . Then , .
+<br> and -measurable function . . (Markov property)<br>
+Proof:<br>
+lemma: Let  be a probability space,  is a sub--field of ,  and  are measurable spaces,  is a -valued r.v. ,  is a -valued r.v. . Suppose  is independent of . Let  be a -measurable function on  s.t. , then .<br>
+It's sufficient to show that  is -measurable which follows from the lemma noticing that .
+<br><br>Martingale:  is a martingale, if , , . Especially, when , we call  is a martingale for short.<br>
+Proposition:  is a martingale, then 	Proof:<br>
+: .<br>
+: It's sufficient to show that  , which follows from the left side directly.<br>Remark: All real-valued independent increment processes with constant mean are martingale but the opposite is not true. Because , when  is a process with independent increment and constant mean, the first term of the rhs equals , but this doesn't necessarily mean  is in independent with .<br><br>Definition: Stable Process:  s. t. .<br>
+Example: Brown motion , <br><br>Definition: Markov Process Suppose  is a stochastic process on  and takes values on ,  is a family of -algebra s.t. , ,  is adapted w.r.t. . We call  is a Markov process when , . Especially, when , we call  is the Markov process on .<br>Proposition:  is a Markov process on , iff , , .<br>
+Proof: : Trivial.<br>
+: We only need to show that , . Let . We can see that , , so the family of finite dimensional rectangle parabolic sets . And it's easy to check that  is a -system, thus .<br>
+Proposition: The followings are equivalent.<br>
+<br> is a Markov process
+<br> and bounded real-valued function , 
+<br>Let ,  bounded real-valued r.v , .
+<br> bounded real-valued function  and , , .<br>
+Proof: 2  3: For measurable real-valued function  and ,<br>
+	By reduction,  and ,<br>
+	Especially, ,<br>
+	Let<br>
+	Obviously,  is a  system. And , ,  and . Hence by monotone class thm. of function. All  measurable function belong to .<br>
+Remark: 's conditional expectation w.r.t. 's given value  and the initial distribution  determine the distribution of .<br>
+Definition: , .
+<br><br>Theorem:<br>Definition: (family of transitive probability): <br>
+<br>For fixed ,  is a probability measure on ;
+<br>For fixed ,  is a - measurable function.
+<br>, we have Kolmogorov-Chapman equation:
+
+Proposition: Let  is a complete divisible metric space generated measure space;  is a transitive probability measure family, then we can construct a measure space  and a Markov process , s.t. 
+
+**Proof**: We use Kolmogorov theorem to construct probability space. For this, let $\Omega = \mathscr S^T$, $\mathscr C$ is the family of finite dimension measurable sets on $\Omega$, $\mathscr F = \sigma(\mathscr C)$. For $\forall t_1 &lt; t_2 &lt; \dots &lt; t_n \in T$ and $\forall \tilde A \in \Sigma^n$. Let
+$$
+F_{t_1, \dots, t_n}(\tilde A) = \int p_0(\mathrm{d} x_0) \int p(0, x_0; t_1, \mathrm d x_1) \cdots \int p(t_{n - 1}, x_{n - 1}; t_n, \mathrm d x_n) \chi_{\tilde A}.
+$$
+
+Theorem(Tulcea): 
+<br>;
+<br>compactness,  for any sequence , .<br>
+, , ,  satisfy that  is a measure on ,  is a probability measure on  for given  and for given ,  is -measurable. 1. and 2. hold. Then  probability measure  on  s.t.
+<br> (i.e. );
+<br>
+
+
+<br><br>Definition(Gauss system): We a stochastic process  on  is a Gauss system if for 's joint distribution is Gaussian, i.e.<br><br>Proposition:  is a Gauss system iff any finite r.v.'s linear combination is a -dimension Gaussian distribution, i.e. ,  is real number, r.v. .<br>
+Proposition: For <br>
+Proposition: Let  is a Gauss system, then:<br>
+<br> is independent iff .
+<br> is independent with  iff .<br>
+Proposition: Let  is a Gauss system, and let , then . Then . And  is Gaussian.<br>
+Proof: , . And  .
+<br>]]></description><link>stochastic-process.html</link><guid isPermaLink="false">Stochastic Process.md</guid><pubDate>Sat, 21 Dec 2024 09:25:41 GMT</pubDate></item></channel></rss>
