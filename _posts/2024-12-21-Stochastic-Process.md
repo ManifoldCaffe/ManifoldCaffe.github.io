@@ -25,6 +25,7 @@ If $\xi$ is separable, then $\sup_{t\in (a, b)}\xi_t$ , $\inf_{t \in (a,b)}\xi_t
 ## §§1.3 Independent Increment Process and Martingale
 ### 1. Independent Increment Process
 **Definition**: *Independent increment process*: $\forall t_0<t_1<\dots<t_n \in T$, $\xi_{t_0}, \xi_{t_1} - \xi_{t_2}, \dots, \xi_{t_n}-\xi_{t_{n-1}}$are independent
+
 **Properties**: 
 + Suppose $\mathbb{E}(\xi_t) = 0 (\forall t \in T)$, $\mathscr{F} = \sigma(\xi_u; u \leq s \in T)$. Then $\forall s < t \in T$, $\mathbb{E}(\xi_t|\mathscr{F}_s) = \xi_s$.
 + $\forall s < t$ and $\mathscr{B}_\mathbf{R}$-measurable function $f$. $\mathbb{E}(f(\xi_t)|\mathscr{F}_s) = \mathbb{E}(f(\xi_t)|\xi_s)$. (Markov property)
@@ -41,6 +42,7 @@ If $\xi$ is separable, then $\sup_{t\in (a, b)}\xi_t$ , $\inf_{t \in (a,b)}\xi_t
 **Remark**: All real-valued independent increment processes with constant mean are martingale but the opposite is not true. Because $\mathbb{E}(\xi_{t+s} | \mathscr{F}) = \mathbb{E}(\xi_{t+s} - \xi_s | \mathscr{F}_s) + \xi_s$, when $\xi$ is a process with independent increment and constant mean, the first term of the rhs equals $0$, but this doesn't necessarily mean $\xi_{t+s} - \xi_{s}$ is in independent with $\mathscr{F}_s$.
 ### 3. Properties of Process with Independent Increment and Stable Process
 **Definition**: ==Stable Process==: $\exists a > 0$ s. t. $\forall c > 0, \xi_{ct} \overset{d}{=} c^{\frac{1}{a}} \xi_t$.
+
 **Example**: Brown motion $\{B_t, t \in \mathbb{R}\}, B_{ct}, c^{\frac{1}{2}}B_t \sim N(0,ct)$, 
 ## §§1.4 Markov Process
 **Definition**: ==Markov Process== Suppose $\xi$ is a stochastic process on $(\Omega, \mathscr{F}, \mathbb{P})$ and takes values on $(\mathscr{S}, \Sigma)$, ${\mathscr{F}_t; t \in T}$ is a family of $\sigma$-algebra s.t. $\forall s < t$, $\mathscr{F}_s \subset \mathscr{F}_t$, $\xi$ is adapted w.r.t. $\{\mathscr{F}_t\}$. We call $\xi$ is a Markov process when $\forall s < t \in T, B \in \Sigma$, $\mathbb{P}(\{\omega, \xi_t(\omega) \in B\} | \mathscr{F}_s) = \mathbb{P}(\{\omega, \xi_t(\omega) \in B\} | \xi_s)$. Especially, when $\mathscr{F}_t = \sigma(\xi_u; u \leq t) = \mathbb{P}(\{\omega | \xi_t(\omega) \in B\} | \xi_s)$, we call $\boldsymbol \xi$ is the Markov process on $(\Omega, \mathscr{F}, \mathbb{P})$.
@@ -48,6 +50,7 @@ If $\xi$ is separable, then $\sup_{t\in (a, b)}\xi_t$ , $\inf_{t \in (a,b)}\xi_t
 **Proposition**: $\boldsymbol{\xi}$ is a Markov process on $(\Omega, \mathscr{F}, \mathbb{P})$, iff $\forall n \geq 1$, $t_1 < t_2 <\dots < t_n < t_{n + 1} \in T$, $\mathbb{P}(\xi_{t_{n + 1}} \in B | \xi_{t_1}, \xi_{t_2}, \dots, \xi_{t_n}) = \mathbb{P}(\xi_{t_{n + 1}} \in B | \xi_{t_n})$.
 	Proof: $\Rightarrow$: Trivial.
 	$\Leftarrow$: We only need to show that $\forall A \in \mathscr F_s$, $\mathbb E(\mathbb P(\xi_t | \xi_s)\chi_A) = \mathbb E(\xi_t \chi_A)$. Let $\mathcal G = \{A | \mathbb E(\mathbb P(\xi_t | \xi_s)\chi_A) = \mathbb E(\xi_t \chi_A)\}$. We can see that $\forall t_1, \dots, s \in T$, $\sigma(\xi_{t_1}, \dots, \xi_s) \subset \mathcal G$, so the family of finite dimensional rectangle parabolic sets $\mathcal C \subset \mathcal G$. And it's easy to check that $\mathcal G$ is a $\lambda$-system, thus $\mathscr F_s = \sigma(\mathcal C) = \lambda(\mathcal C) \subset \lambda(\mathcal G) = \mathcal G$.
+
 **Proposition**: The followings are equivalent.
 1. $\xi$ is a Markov process
 2. $\forall s < t \in T$ and bounded real-valued function $f \in (\mathscr{S}, \Sigma)$, $$\mathbb{E}(f(\xi_t) | \mathscr{F}_s) = \mathbb{E}(f(\xi_t) | \xi_s).$$
@@ -82,7 +85,9 @@ If $\xi$ is separable, then $\sup_{t\in (a, b)}\xi_t$ , $\inf_{t \in (a,b)}\xi_t
 	\end{align}.
 	$$
 	Obviously, $\mathscr S$ is a $\pi$ system. And $\forall A \in \mathscr S$, $\chi_A \in \mathscr H$, $1 \in \mathscr H$ and $f_n \in \mathscr H, n \geq 1, 0 \leq f_n \uparrow f \implies f \in \mathscr H$. Hence by monotone class thm. of function. All $\sigma(\mathscr S)$ measurable function belong to $\mathscr H$.
+    
 **Remark**: $\xi_t$'s conditional expectation w.r.t. $\xi_s$'s given value $\mathbb E( \xi_t \in A | \xi_s = x)$ and the initial distribution $\mathbb P \circ \xi_0^{-1}$ determine the distribution of $\boldsymbol \xi$.
+
 **Definition**: $p(s, x; t, A) \triangleq \mathbb E(\chi_{\{\xi_t \in A\}} | \xi_s = x)$, $p_0(A) \triangleq \mathbb P([\xi_0 \in A])$.
 ***
 **Theorem**:
@@ -94,6 +99,7 @@ If $\xi$ is separable, then $\sup_{t\in (a, b)}\xi_t$ , $\inf_{t \in (a,b)}\xi_t
 $$
 p(s, x; t, A) = \int p(s, x; r, \mathrm{d}y) p(r, y; t, A)
 $$
+
 **Proposition**: Let $(\mathscr S, \Sigma)$ is a complete divisible metric space generated measure space; $\{p(s, x; t, A); s < t \in T, x \in \mathscr S, A \in \Sigma \}$ is a transitive probability measure family, then we can construct a measure space $(\Omega, \mathscr F, \mathbb P)$ and a Markov process $\boldsymbol \xi$, s.t. 
 $$
 \mathbb P([\xi_t \in A]) = p(s, x; t, A).
@@ -102,6 +108,7 @@ $$
 	$$
 	F_{t_1, \dots, t_n}(\tilde A) = \int p_0(\mathrm{d} x_0) \int p(0, x_0; t_1, \mathrm d x_1) \cdots \int p(t_{n - 1}, x_{n - 1}; t_n, \mathrm d x_n) \chi_{\tilde A}.
 	$$
+    
 **Theorem(Tulcea)**: 
 1. $\forall \omega \in A \in \mathscr F_{n - 1}, Q(n, \omega, A) = 1$;
 2. compactness,  $$A_n(\omega) \triangleq \bigcap_{A \in \mathscr F_n, \omega \in A} A.$$for any sequence $\omega^{(n)} \in \Omega(n \geq 1)$, $\forall N \geq 1, \bigcap_{n = 1}^N A_n(\omega^{(n)}) \neq \varnothing \implies \bigcap_{n = 1}^\infty A_n(\omega^{(n)}) \neq \varnothing$. 
@@ -119,11 +126,15 @@ $$
 $$
 \mathbb E \exp^{\imath \sum_{k = 1}^{n} \lambda_k \xi_{t_k}} = \exp^{\imath \sum_{k = 1}^n \lambda_k \mathbb E(\xi_{t_k}) - \frac{1}{2}\sum_{i,j}\lambda_i \mathrm{Cov}(\xi_{t_i},\xi_{t_j})\lambda_j}
 $$
+
 **Proposition**: $\boldsymbol \xi$ is a Gauss system iff any finite r.v.'s linear combination is a $1$-dimension Gaussian distribution, i.e. $\forall t_1, t_2, \cdots, t_n \in T(n \geq 1)$, $\alpha_k$ is real number$(1 \leq k \leq n)$, r.v. $\sum_{k = 1}^n \alpha_k \xi_{t_k} \sim N$.
+
 **Proposition**: For $\forall n$
+
 **Proposition**: Let $\boldsymbol \xi = \{\xi_t; t \in T\}$ is a Gauss system, then:
 1. $\boldsymbol \xi$ is independent iff $\forall s \neq t(s, t \in T), \sigma(s, t) \triangleq \mathbb E(\xi_t - \mathbb E \xi_t)(\xi_s - \mathbb \xi_s) = 0$.
 2. $\xi_{t_0}$ is independent with $\{\xi_t; t \in T, t \neq t_0\}$ iff $\sigma(t_0, t) = 0 (\forall t \in T, t \neq t_0)$.
+
 **Proposition**: Let $\boldsymbol \xi$ is a Gauss system, and let $\xi_{t_n} \in \boldsymbol \xi$, then $\xi_{t_n} \overset{\mathbb P}{\to} \xi_0 (n \to \infty)$. Then $\mathbb \xi_{t_n} \overset{L^2}{\to} \xi_0  (n \to \infty)$. And $\xi_0$ is Gaussian.
 	**Proof**: $\forall \epsilon > 0$, $\mathbb P( | \xi_{t_j} - \xi_{t_k} | > \epsilon) \to 0 (k, j \to \infty)$. And  $LHS =$.
 ## §§2.2 Stopping Time and Stopping Theorem of Martingale
