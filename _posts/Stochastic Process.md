@@ -1,7 +1,20 @@
+---
+layout:     post
+title:      [Notes] Stochatic Process
+subtitle:   
+date:       2024-12-21
+author:     ManifoldCaffe
+header-img: img/post-bg-ios9-web.jpg
+catalog: true
+tags:
+    - Math
+    - Stochastic Process
+---
 # §1 Intro
 ## §§1.2 Kolmogorov thm. and separability
 ### 1. Kolmogorov Theorem
-**Proposition**: Suppose $(\mathscr{S}, \mathscr{F})$ is a Polish space with a compatible probability measure family $\{P_s|s \in \bigcup_{i=1}^\infty T^i\}$, then there is a probability $P$ on $(\mathscr{S}^T, \mathscr{F}^T)$ s.t. coincides with $P_s$ on finite rectangle parabolic set on $\mathscr{S}^T$.
+**Proposition**: Suppose $(\mathscr{S}, \mathscr{F})$ is a Polish space with a compatible probability measure family $\{P_s|s \in \bigcup_{i=1}^\infty T^i\}$, then there is a probability $P$ on $(\mathscr{S}^T, \mathscr{F}^T)$ s.t. coincides with $P_s$ on finite rec
+tangle parabolic set on $\mathscr{S}^T$.
 ### 2. Separability
 **Definition**: *Separability of stochastic process*: $\forall$open interval $I$, $\forall$ closed set $F$, $\xi_t(\omega) \in F$, $\forall t \in S \cap I$ 
 $\implies \xi_t(\omega) \in F$, $\forall t \in T \cap I$ a.e
