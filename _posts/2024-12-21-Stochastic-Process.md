@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      [Notes]Stochatic Process
+title:      \[Notes\]Stochatic Process
 subtitle:   ---
 date:       2024-12-21
 author:     ManifoldCaffe
