@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      我的latex-suite快捷键设置
+subtitle:   ---
 date:       2024-12-25
 author:     ManifoldCaffe|流形咖啡
 header-img: img/post-bg-ios9-web.jpg
