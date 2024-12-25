@@ -117,7 +117,8 @@ $$
 2. compactness,  $$A_n(\omega) \triangleq \bigcap_{A \in \mathscr F_n, \omega \in A} A.$$for any sequence $\omega^{(n)} \in \Omega(n \geq 1)$, $\forall N \geq 1, \bigcap_{n = 1}^N A_n(\omega^{(n)}) \neq \varnothing \implies \bigcap_{n = 1}^\infty A_n(\omega^{(n)}) \neq \varnothing$. 
 $\mathscr F_n \subset \mathscr F$, $\mathscr F_n \uparrow \mathscr F ( n \geq 0)$, $\{Q_0(\cdot)\}$, $\{Q_n(\omega; \cdot)\}$ satisfy that $Q(0, \cdot)$ is a measure on $(\Omega, \mathscr F_0)$, $Q_n(\omega; \cdot)$ is a probability measure on $(\Omega, \mathscr F_n)$ for given $\omega$ and for given $A \in \mathscr F_n$, $Q_n( \cdot; A)$ is $\mathscr F_{n - 1}$-measurable. 1. and 2. hold. Then $\exists!$ probability measure $\mathbb P$ on $(\Omega, \mathscr F)$ s.t.
 1. $\mathbb P |_{\mathscr{F}_0} = Q_0(\cdot)$ (i.e. $\forall A \in \mathscr F_0, \mathbb P(A) = Q_0(A)$);
-2. $$
+2. 
+$$
 \begin{align}
 \mathbb E(\chi_A | \mathscr F_{n - 1}) = Q_n(\omega; A)(\forall A \in \mathscr F_n) \\
 \iff \int_{A \cap B} \mathrm d \mathbb P = \int_B Q_n(\omega; A) \mathbb P(\mathrm d \omega) (\forall A \in \mathscr F_n, B \in \mathscr F_{n - 1}) \\
