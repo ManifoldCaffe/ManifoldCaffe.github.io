@@ -11,6 +11,7 @@ tags:
 	- code
 	- obsidian
 ---
+```JavaScript
 [
 
     //Mine
@@ -366,3 +367,4 @@ tags:
 		return output;
 	}, options: "mA", description: "N x N identity matrix"},
 ]
+```
