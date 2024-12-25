@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Stochatic Process
-subtitle:   Note
+title:      Note on Stochatic Process
+subtitle:   ---
 date:       2024-12-21
 author:     ManifoldCaffe
 header-img: img/post-bg-ios9-web.jpg
