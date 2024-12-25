@@ -7,10 +7,10 @@ author:     ManifoldCaffe|流形咖啡
 header-img: img/post-bg-ios9-web.jpg
 catalog: true
 tags:
-    - latex
-    - math
-	- code
-	- obsidian
+- latex
+- math
+- code
+- obsidian
 ---
 ```JavaScript
 [
