@@ -1,16 +1,3 @@
----
-layout:     post
-title:      Note on Stochatic Process
-subtitle:   ---
-date:       2024-12-21
-author:     ManifoldCaffe
-header-img: img/post-bg-ios9-web.jpg
-catalog: true
-tags:
-    - Math
-    - Stochastic Process
----
-
 # §1 Intro
 
 ## §§1.2 Kolmogorov thm. and separability
@@ -160,3 +147,5 @@ $$
 **Theorem**: Let 
 # Markov Chain
 ![状态分类](https://www.math.pku.edu.cn/teachers/lidf/course/stochproc/stochprocnotes/html/_book/figs/markov-stateclasses-001.png)
+
+
