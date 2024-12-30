@@ -54,6 +54,8 @@ kramdown:
   input: GFM                            # use Github Flavored Markdown !important
 
 
+# Mathjax support
+mathjax: true
 
 # 评论系统
 # Disqus（https://disqus.com/）
