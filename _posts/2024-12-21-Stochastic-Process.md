@@ -1,14 +1,14 @@
 ---
-layout:     post
-title:      Note on Stochatic Process
-subtitle:   ---
-date:       2024-12-21
-author:     ManifoldCaffe
+layout: post
+title: Note on Stochatic Process
+subtitle: ---
+date: 2024-12-21
+author: ManifoldCaffe|流形咖啡
 header-img: img/post-bg-ios9-web.jpg
 catalog: true
 tags:
-    - Math
-    - Stochastic Process
+  - stochastic-process
+  - mathmematics
 ---
 
 # §1 Intro
