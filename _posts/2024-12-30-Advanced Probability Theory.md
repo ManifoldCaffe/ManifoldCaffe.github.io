@@ -18,7 +18,8 @@ Supremum inequality, $\{S_n - \mathbb{E} S_n\}$ is a martingale
 
 **Theorem.**: Let $\{X_n\}$ be a iid r.v. and $\sum_n D X_n < +\infty$, then $\sum_n(S_n - \mathbb X_n)$ converges a.e. .
 
-**Proof**: W. L. O. G. , suppose $\mathbb{E} X_n = 0, \forall n \geq 1$. Let $S_n = \sum_{i = 1}^n X_i, n \geq 1$. $S_n$ converges a.s. $\Leftrightarrow$ $S_n - S_m \overset{a.s.}{\rightarrow} 0$ as $n, m \rightarrow +\infty$ $\Leftrightarrow$ $\forall \epsilon > 0$, $\mathbb{P}(\bigcap_{l = 1}^\infty \bigcup_{m, n > l}[| S_n - S_m | \geq \epsilon]) = 0$ 
+**Proof**: W. L. O. G. , suppose $\mathbb{E} X_n = 0, \forall n \geq 1$. Let $S_n = \sum_{i = 1}^n X_i, n \geq 1$. $S_n$ converges a.s. $\Leftrightarrow$ $S_n - S_m \overset{a.s.}{\rightarrow} 0$ as $n, m \rightarrow +\infty$ $\Leftrightarrow$ $\forall \epsilon > 0$, $\mathbb{P}(\bigcap_{l = 1}^\infty \bigcup_{m, n > l}[| S_n - S_m | \geq \epsilon]) = 0$.
+
 ***
 
 **Definition**: A measurable space is called separable, if every atom of it is singleton. Two measurable spaces are called isomorphic if there exists a bijection that is measurable both sides (which is called measurable a isomorphism). [](https://www.bananaspace.org/wiki/%E8%AE%B2%E4%B9%89:%E9%9B%86%E5%90%88%E8%AE%BA%E5%9F%BA%E7%A1%80_(OperatorP)/%E5%88%9D%E7%AD%89%E6%8F%8F%E8%BF%B0%E9%9B%86%E5%90%88%E8%AE%BA/%E6%A0%87%E5%87%86Borel%E7%A9%BA%E9%97%B4)
@@ -72,6 +73,7 @@ Then $\mathcal H$ containing all $\mathcal F$-measurable function on $\Omega$.
 
 **Proof**:
 Let $\mathcal T = \{A \in \mathcal F | \chi_A \in \mathcal H\}$, then by 3. we know that $\mathcal T \supset \mathcal C$, and by 2. we know that $\mathcal T$ is a monotone class. Thus by monotone class thm. $\mathcal F \subset \mathcal T$.
+
 ***
 
 **Theorem**: Let $\mathcal C$ be a $\pi$-system on $\Omega$, $\mathcal H$ be a linear space consisting of some real-valued function on $\Omega$. If:
